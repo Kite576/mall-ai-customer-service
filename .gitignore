@@ -1,0 +1,36 @@
+# dependencies
+frontend/node_modules/
+frontend/.vite/
+
+# build output
+frontend/dist/
+backend/target/
+
+# local tools
+.tools/
+
+# environment
+.env
+.env.*
+!.env.example
+
+# logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
