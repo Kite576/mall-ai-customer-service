@@ -45,6 +45,11 @@ public class OrderController {
         return ApiResponse.success(orderService.cancel(orderId));
     }
 
+    @PutMapping("/api/orders/{orderId}/confirm")
+    public ApiResponse<Order> confirm(@PathVariable Long orderId) {
+        return ApiResponse.success(orderService.confirm(orderId));
+    }
+
     @GetMapping("/api/orders/{orderId}/tracking")
     public ApiResponse<List<ShipmentTracking>> tracking(@PathVariable Long orderId) {
         return ApiResponse.success(orderService.tracking(orderId));

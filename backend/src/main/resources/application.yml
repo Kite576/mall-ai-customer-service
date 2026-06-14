@@ -10,7 +10,7 @@ spring:
   application:
     name: mall-ai-service
   datasource:
-    url: jdbc:h2:mem:mall;MODE=MySQL;DATABASE_TO_LOWER=TRUE;DB_CLOSE_DELAY=-1
+    url: jdbc:h2:file:./data/mall;MODE=MySQL;DATABASE_TO_LOWER=TRUE;DB_CLOSE_DELAY=-1
     username: sa
     password:
     driver-class-name: org.h2.Driver
@@ -20,7 +20,7 @@ spring:
       path: /h2-console
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     defer-datasource-initialization: true
     open-in-view: false
     properties:
@@ -34,5 +34,5 @@ mall:
   demo-user-id: 1
   ai:
     api-url: ${AI_API_URL:https://api.deepseek.com/chat/completions}
-    api-key: ${AI_API_KEY:}
-    model: ${AI_MODEL:deepseek-chat}
+    api-key: ${AI_API_KEY:请填写你的 DeepSeek API Key}
+    model: ${AI_MODEL:deepseek-v4-flash}

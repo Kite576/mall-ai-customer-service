@@ -17,6 +17,7 @@ public class Product {
     private BigDecimal price;
     private Integer stock;
     private String specs;
+    private String tags;
     private String imageUrl;
     private Long categoryId;
     private Integer status;
@@ -59,6 +60,14 @@ public class Product {
 
     public void setSpecs(String specs) {
         this.specs = specs;
+    }
+
+    public String getTags() {
+        return tags;
+    }
+
+    public void setTags(String tags) {
+        this.tags = tags;
     }
 
     public String getImageUrl() {
